@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise counter</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+      width: 100px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #increment1 {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #increment2 {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #increment3 {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #increment4 {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #increment5 {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #increment6 {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #increment7 {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #increment8 {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #increment9 {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #increment0 {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="text" id="counter" value="0" readonly>
+    <div>
+        <button id="increment1">1</button>
+        <button id="increment2">2</button>
+        <button id="increment3">3</button>
+    </div>
+    <div>
+        <button id="increment4">4</button>
+        <button id="increment5">5</button>
+        <button id="increment6">6</button>
+    </div>
+    <div>
+        <button id="increment7">7</button>
+        <button id="increment8">8</button>
+        <button id="increment9">9</button>
+    </div>
+    <div>
+        <button id="incrementC">Reset</button>
+        <button id="increment0">0</button>
+        <button id="incrementB">Borrar</button>
+    </div>
+    <div>
+        <button style="width: 200px; height: 80px; font-size: 20px;" onclick="peso()">Peso</button>
+        <button style="width: 200px; height: 80px; font-size: 20px;" onclick="flexiones()">Flexiones</button>
+        <button style="width: 200px; height: 80px; font-size: 20px;" onclick="remos()">Remos</button>
+    </div>
+    <h2>Resumen del dia</h2>
+
+<h3>Peso: 92
+<h3>Flexiones: 40
+<h3>Remos: 10
+  </div>
+  <script>
+    const counter = document.getElementById("counter");
+    const increment1Button = document.getElementById("increment1");
+    const increment2Button = document.getElementById("increment2");
+    const increment3Button = document.getElementById("increment3");
+    const increment4Button = document.getElementById("increment4");
+    const increment5Button = document.getElementById("increment5");
+    const increment6Button = document.getElementById("increment6");
+    const increment7Button = document.getElementById("increment7");
+    const increment8Button = document.getElementById("increment8");
+    const increment9Button = document.getElementById("increment9");
+    const increment0Button = document.getElementById("increment0");
+    const incrementCButton = document.getElementById("incrementC");
+    const incrementBButton = document.getElementById("incrementB");
+
+    let count = 0;
+
+    increment1Button.addEventListener("click", () => {
+      count = count * 10 + 1;
+      counter.value = count;
+    });
+
+    increment2Button.addEventListener("click", () => {
+      count = count * 10 + 2;
+      counter.value = count;
+    });
+
+    increment3Button.addEventListener("click", () => {
+      count = count * 10 + 3;
+      counter.value = count;
+    });
+
+    increment4Button.addEventListener("click", () => {
+      count = count * 10 + 4;
+      counter.value = count;
+    });
+
+    increment5Button.addEventListener("click", () => {
+      count = count * 10 + 5;
+      counter.value = count;
+    });
+
+    increment6Button.addEventListener("click", () => {
+      count = count * 10 + 6;
+      counter.value = count;
+    });
+
+    increment7Button.addEventListener("click", () => {
+      count = count * 10 + 7;
+      counter.value = count;
+    });
+
+    increment8Button.addEventListener("click", () => {
+      count = count * 10 + 8;
+      counter.value = count;
+    });
+
+    increment9Button.addEventListener("click", () => {
+      count = count * 10 + 9;
+      counter.value = count;
+    });
+
+    increment0Button.addEventListener("click", () => {
+      count *= 10;
+      counter.value = count;
+    });
+
+    incrementCButton.addEventListener("click", () => {
+      count = 0;
+      counter.value = count;
+    });
+
+    incrementBButton.addEventListener("click", () => {
+      count = Math.floor(count / 10);
+      counter.value = count;
+    });
+
+    function flexiones() {
+
+	// Construir el URL con el contador como parametro
+	const url = `fl${encodeURIComponent(count)}`;
+	
+	window.location.href = url;
+    }
+
+    function remos() {
+
+	// Construir el URL con el contador como parametro
+	const url = `re${encodeURIComponent(count)}`;
+	
+	window.location.href = url;
+    }
+
+    function peso() {
+
+	// Construir el URL con el contador como parametro
+	const url = `pe${encodeURIComponent(count)}`;
+	
+	window.location.href = url;
+    }
+  </script>
+</body>
+</html>
+
+    
+
+

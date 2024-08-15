@@ -1,0 +1,8 @@
+[package]
+name = "exercise_app_version_4"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+chrono = "0.4.38"
+spin_sleep = "1.2.1"

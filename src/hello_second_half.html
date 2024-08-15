@@ -1,0 +1,107 @@
+  </div>
+  <script>
+    const counter = document.getElementById("counter");
+    const increment1Button = document.getElementById("increment1");
+    const increment2Button = document.getElementById("increment2");
+    const increment3Button = document.getElementById("increment3");
+    const increment4Button = document.getElementById("increment4");
+    const increment5Button = document.getElementById("increment5");
+    const increment6Button = document.getElementById("increment6");
+    const increment7Button = document.getElementById("increment7");
+    const increment8Button = document.getElementById("increment8");
+    const increment9Button = document.getElementById("increment9");
+    const increment0Button = document.getElementById("increment0");
+    const incrementCButton = document.getElementById("incrementC");
+    const incrementBButton = document.getElementById("incrementB");
+
+    let count = 0;
+
+    increment1Button.addEventListener("click", () => {
+      count = count * 10 + 1;
+      counter.value = count;
+    });
+
+    increment2Button.addEventListener("click", () => {
+      count = count * 10 + 2;
+      counter.value = count;
+    });
+
+    increment3Button.addEventListener("click", () => {
+      count = count * 10 + 3;
+      counter.value = count;
+    });
+
+    increment4Button.addEventListener("click", () => {
+      count = count * 10 + 4;
+      counter.value = count;
+    });
+
+    increment5Button.addEventListener("click", () => {
+      count = count * 10 + 5;
+      counter.value = count;
+    });
+
+    increment6Button.addEventListener("click", () => {
+      count = count * 10 + 6;
+      counter.value = count;
+    });
+
+    increment7Button.addEventListener("click", () => {
+      count = count * 10 + 7;
+      counter.value = count;
+    });
+
+    increment8Button.addEventListener("click", () => {
+      count = count * 10 + 8;
+      counter.value = count;
+    });
+
+    increment9Button.addEventListener("click", () => {
+      count = count * 10 + 9;
+      counter.value = count;
+    });
+
+    increment0Button.addEventListener("click", () => {
+      count *= 10;
+      counter.value = count;
+    });
+
+    incrementCButton.addEventListener("click", () => {
+      count = 0;
+      counter.value = count;
+    });
+
+    incrementBButton.addEventListener("click", () => {
+      count = Math.floor(count / 10);
+      counter.value = count;
+    });
+
+    function flexiones() {
+
+	// Construir el URL con el contador como parametro
+	const url = `fl${encodeURIComponent(count)}`;
+	
+	window.location.href = url;
+    }
+
+    function remos() {
+
+	// Construir el URL con el contador como parametro
+	const url = `re${encodeURIComponent(count)}`;
+	
+	window.location.href = url;
+    }
+
+    function peso() {
+
+	// Construir el URL con el contador como parametro
+	const url = `pe${encodeURIComponent(count)}`;
+	
+	window.location.href = url;
+    }
+  </script>
+</body>
+</html>
+
+    
+

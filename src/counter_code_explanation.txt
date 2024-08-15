@@ -1,0 +1,27 @@
+Explanation:
+
+    HTML structure:
+
+        A text input box with id="counter" is created, set to readonly to prevent direct editing.
+
+        Two buttons are added with id="increment" and id="decrement".
+
+    JavaScript code:
+
+        counter, incrementButton, and decrementButton variables are obtained from the DOM using getElementById().
+
+        count is initialized to 0.
+
+        Event listeners are attached to the buttons:
+
+            When incrementButton is clicked, count is increased by 1 and the counter value is updated.
+
+            When decrementButton is clicked, count is decreased by 1 and the counter value is updated.
+
+How it works:
+
+    When you click the "Increment" button, the JavaScript code increments the count variable and updates the value of the counter input box.
+
+    When you click the "Decrement" button, the JavaScript code decrements the count variable and updates the value of the counter input box.
+
+This code provides a simple counter with increment and decrement buttons, effectively showcasing the interaction between HTML, CSS, and JavaScript.

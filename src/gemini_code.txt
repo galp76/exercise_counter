@@ -1,0 +1,74 @@
+      
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Centered Input and Button</title>
+  <style>
+    body {
+      display: flex; /* Enable flexbox layout for the entire body */
+      justify-content: center; /* Center items horizontally */
+      align-items: center; /* Center items vertically */
+      height: 100vh; /* Make the body take up the full viewport height */
+      margin: 0; /* Remove default browser margins */
+    }
+
+    .container {
+      display: flex; /* Enable flexbox layout for the container */
+      flex-direction: column; /* Arrange items vertically */
+      align-items: center; /* Center items horizontally within the container */
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50; /* Green background */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="text" placeholder="Enter your text here">
+    <button type="submit">Submit</button>
+  </div>
+</body>
+</html>
+
+    
+
+Use code with caution.Html
+
+Explanation of the centering code:
+
+    Flexbox layout:
+
+        display: flex; on the body and .container elements enables Flexbox layout, which provides powerful control over item alignment and spacing.
+
+    Horizontal centering:
+
+        justify-content: center; on the body element centers the content horizontally within the viewport.
+
+        align-items: center; on the .container element centers the input and button horizontally within their container.
+
+    Vertical centering:
+
+        align-items: center; on the body element centers the content vertically within the viewport.
+
+        flex-direction: column; on the .container element arranges the input and button vertically.
+
+Additional Notes:
+
+    height: 100vh; on the body element ensures the body takes up the full height of the viewport.
+
+    margin: 0; on the body element removes default browser margins.
+
+This code creates a simple HTML page with a text input box and a submit button centered in the middle of the page. The combination of Flexbox properties ensures the items are correctly positioned and aligned.
+

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise counter</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+      width: 100px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #increment1 {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #increment5 {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #increment10 {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #decrement1 {
+      background-color: #f44336;
+      color: white;
+    }
+
+    #decrement5 {
+      background-color: #f44336;
+      color: white;
+    }
+
+    #decrement10 {
+      background-color: #f44336;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="text" id="counter" value="0" readonly>
+    <div>
+        <button id="increment10">+10</button>
+        <button id="increment5">+5</button>
+        <button id="increment1">+1</button>
+    </div>
+    <div>
+	<button id="decrement10">-10</button>
+	<button id="decrement5">-5</button>
+	<button id="decrement1">-1</button>
+    </div>
+    <div>
+        <button style="width: 200px; height: 80px; font-size: 20px;" onclick="flexiones()">Flexiones</button>
+        <button style="width: 200px; height: 80px; font-size: 20px;" onclick="remos()">Remos</button>
+    </div>
+    <h2>Resumen del dia</h2>
+    <h3>Flexiones:</h3>
+    <h3>Remos:</h3>
+  </div>
+  <script>
+    const counter = document.getElementById("counter");
+    const increment1Button = document.getElementById("increment1");
+    const increment5Button = document.getElementById("increment5");
+    const increment10Button = document.getElementById("increment10");
+    const decrement1Button = document.getElementById("decrement1");
+    const decrement5Button = document.getElementById("decrement5");
+    const decrement10Button = document.getElementById("decrement10");
+
+    let count = 0;
+
+    increment1Button.addEventListener("click", () => {
+      count++;
+      counter.value = count;
+    });
+
+    increment5Button.addEventListener("click", () => {
+      count += 5;
+      counter.value = count;
+    });
+
+    increment10Button.addEventListener("click", () => {
+      count += 10;
+      counter.value = count;
+    });
+
+    decrement1Button.addEventListener("click", () => {
+      count--;
+      counter.value = count;
+    });
+
+    decrement5Button.addEventListener("click", () => {
+      count -= 5;
+      counter.value = count;
+    });
+
+    decrement10Button.addEventListener("click", () => {
+      count -= 10;
+      counter.value = count;
+    });
+
+    function flexiones() {
+
+	// Construir el URL con el contador como parametro
+	const url = `fl${encodeURIComponent(count)}`;
+	
+	window.location.href = url;
+    }
+
+    function remos() {
+
+	// Construir el URL con el contador como parametro
+	const url = `re${encodeURIComponent(count)}`;
+	
+	window.location.href = url;
+    }
+  </script>
+</body>
+</html>
+
+    
