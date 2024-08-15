@@ -16,6 +16,9 @@ fn main() {
 
 fn handle_connection(mut stream: TcpStream) {
     let buf_reader = BufReader::new(&mut stream);
+
+    // Debugging render.com:
+    println!("CONTENIDO DE BUF_READER: {:?}", buf_reader);
     let http_request: Vec<_> = buf_reader
 	.lines()
 	.map(|result| result.unwrap())
